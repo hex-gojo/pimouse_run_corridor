@@ -23,7 +23,7 @@ class WallTrace():
 			s = self.sensor_values
 			data.linear.x += accel
 
-			if s.sum_foward >= 50:		data.linear.x = 0.0
+			if s.sum_forward >= 50:		data.linear.x = 0.0
 			elif data.linear.x <= 0.2:	data.linear.x = 0.2
 			elif data.linear.x >= 0.8:	data.linear.x = 0.8
 
