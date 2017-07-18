@@ -27,7 +27,7 @@ class WallAroundTest(unittest.TestCase):
                 self.assertTrue(left > right, "don't cruve to right but there is a wall in left side")
 
 		left, right = self.set_and_get(0, 0, 5, 0) #curve to left
-                self.assertTrue(left > right, "don't curve to left")
+                self.assertTrue(left < right, "don't curve to left")
 
 if __name__ == '__main__':
 	time.sleep(3)
