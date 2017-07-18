@@ -18,13 +18,13 @@ class WallAroundTest(unittest.TestCase):
 
 	def test_io(self):
 		left, right = self.set_and_get(51, 5, 0, 25) #cruve to right
-		self.assertTrue(left > right, "don't curve to right")
+		self.assertTrue(left > right, "don't curve to right but there is a wall in front")
 
 		left, right = self.set_and_get(0, 5, 100, 0) #cruve to left
-                self.assertTrue(left < right, "don't cruve to left")
+                self.assertTrue(left < right, "don't cruve to left but there is a wall in right side")
 
 		left, right = self.set_and_get(0, 100, 5, 0) #cruve to right
-                self.assertTrue(left > right, "don't cruve to right")
+                self.assertTrue(left > right, "don't cruve to right but there is a wall in left side")
 
 		left, right = self.set_and_get(0, 0, 5, 0) #curve to left
                 self.assertTrue(left > right, "don't curve to left")
